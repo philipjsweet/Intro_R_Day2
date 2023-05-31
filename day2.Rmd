@@ -53,8 +53,10 @@ head(omp)
 # your R code here
 ```
 
-2. Make the same plot but make the size of the lines thicker by specifying the `size` argument inside of `geom_line()`. 
+2. Make the same plot but make the size of the lines thicker by specifying the `size` argument inside of `geom_line()`. How does R respond to that request?
+
 3. Use `scale_color_colorblind()` to convert the legend colors to a colorblind-friendly palette. 
+
 4. Use `xlab()` and `ylab` to give the figure pretty labels.
 
 ```{r}
@@ -82,6 +84,7 @@ head(bacteria)
 Notice that, by default, `geom_bar()` stacks the counts for each class of `presence` on top of each other. Now:
 
 2. Modify the plot so that bars indicating the patients with or without the bacterium are shown side-by-side. Hint: This requires the argument `position='dodge'` in `geom_bar()`.
+
 3. Use `scale_fill_brewer()` to change the plot colors. 
 
 ```{r }
@@ -107,6 +110,7 @@ head(dandelion)
 ```
 
 1. Plot a heat map using `geom_tile` where each condition is on the x-axis and each gene (either `transcript_dandelion` or `loci_arabidopsis`) is on the y-axis. 
+
 2. Fill the color of the heat map using the `log2_foldchange` column. Use `scale_fill_distiller()` to specify a continuous **diverging** color palette.
 
 *(Note that I have told R Markdown to make a larger figure, by starting the code block with* `{r fig.height=6, fig.width=10}` *instead of* `{r}`*, because the default figure size is too narrow to show the resulting axes and map.)*
@@ -116,7 +120,9 @@ head(dandelion)
 ```
 
 3. Make the same plot again, but rotate the text on the x-axis so they aren't mashing into each other.
-4. Apply a different color palette this time. You can use a different palette within `scale_fill_distiller()` (see `?scale_fill_distiller`) or you can use a different continuous color function, such as `scale_fill_viridis_c()` or `scale_fill_gradient()`.
+
+4. Apply a different color palette this time. You can use a different palette within
+`scale_fill_distiller()` (see `?scale_fill_distiller`) or you can use a different continuous color function, such as `scale_fill_viridis_c()` or `scale_fill_gradient()`.
 
 ```{r fig.height=4, fig.width=7}
 # your R code here
@@ -145,6 +151,7 @@ head(biopsy)
 ```
 
 3. Add a layer to your code that creates side-by-side plots of `clump_thickness` distribution for each value of `mitoses` using the `facet_wrap()` function.
+
 4. Try this with and without specifying the `ncol = 3` argument inside of the `facet_wrap()` function.
 
 ```{r}
@@ -154,6 +161,7 @@ head(biopsy)
 ### 3.2 Histograms, density plots
 
 1. Make a histogram plot of sepal lengths in the `iris` data set, using the default histogram settings. Use `geom_histogram()`.
+
 2. Make two more such plots, with different bin widths. You can change the bin width by specifying the argument `binwidth =` or `bins = `. See `?geom_histogram` for more information.
 
 ```{r }
